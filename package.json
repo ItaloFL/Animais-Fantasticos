@@ -10,5 +10,9 @@
   },
   "dependencies": {
     "eslint-config-prettier": "^8.3.0"
+  },
+  "author": {
+    "email": "italofl.dev@gmail.com",
+    "name": "Italo Ferreira Lopes"
   }
 }
