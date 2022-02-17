@@ -7,9 +7,10 @@ import initTooltip from "./modules/tooltip.js";
 import initDropDownMenu from './modules/dropDownMenu.js'
 import outsideClick from "./modules/outsideClick.js";
 import initMenuMobile from './modules/menu-mobile.js';
-import { initFuncionamento } from "./modules/funcionamento.js";
+import initFuncionamento from "./modules/funcionamento.js";
 import fetchAnimais from "./modules/fetchAnimais.js"; 
 import fetchBtc from "./modules/fetchBtc.js"; 
+import initAnimaNumeros from "./modules/anima-numeros.js";
 
 initAnimacaoScroll();
 initAccordion();
@@ -23,6 +24,7 @@ outsideClick();
 initFuncionamento();
 fetchAnimais();
 fetchBtc();
+initAnimaNumeros();
 
 
 

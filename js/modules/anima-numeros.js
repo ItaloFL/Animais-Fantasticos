@@ -11,10 +11,9 @@ function animaNumero() {
     let start = 0;
     
     const timer = setInterval(() => {
-      start = start + incremento;
+      start += incremento;
       numero.innerText = start;
-      start++
-      if(start > total) {
+      if (start > total) {
         numero.innerText = total;
         clearInterval(timer);
       }
@@ -22,17 +21,19 @@ function animaNumero() {
   })
 
 }
+let observer;
 
 function handleMutation(mutation) {
   if(mutation[0].target.classList.contains('ativo')) {
-    observar.disconnect();
+    observer.disconnect();
     animaNumero();
   }
 }
 
-const observeTarget = document.querySelector('.numeros')
-const observar = new MutationObserver(handleMutation);
+observer = new MutationObserver(handleMutation);
 
-observar.observe(observeTarget, {
+const observeTarget = document.querySelector('.numeros')
+
+observer.observe(observeTarget, {
   attributes: true
 })

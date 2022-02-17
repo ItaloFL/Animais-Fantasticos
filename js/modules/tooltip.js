@@ -1,25 +1,10 @@
 export default function initTooltip() {
   const tooltips = document.querySelectorAll('[data-tooltip]');
-
-  tooltips.forEach((item) => {
-    item.addEventListener('mouseover', onMouseOver);
-  })
-  
-  function onMouseOver(event) {
-    const tooltip = criarTollTipBox(this);
-    
-    onMouseMove.tooltip = tooltip;
-    this.addEventListener('mousemove', onMouseMove);
-  
-    onMouseLeave.tooltip = tooltip;
-    onMouseLeave.element = this;
-    this.addEventListener('mouseleave', onMouseLeave);
-  }
   
   const onMouseMove = {
     handleEvent(event) {
-      this.tooltip.style.top = event.pageY + 20 + 'px';
-      this.tooltip.style.left = event.pageX + 20 + 'px';
+      this.tooltip.style.top = `${event.pageY + 20}px`;
+      this.tooltip.style.left = `${event.pageX + 20}px`;
     }
   }
   
@@ -40,5 +25,22 @@ export default function initTooltip() {
   
     return tooltip;
   }
+  
+  function onMouseOver() {
+    const tooltip = criarTollTipBox(this);
+    
+    onMouseMove.tooltip = tooltip;
+    this.addEventListener('mousemove', onMouseMove);
+  
+    onMouseLeave.tooltip = tooltip;
+    onMouseLeave.element = this;
+    this.addEventListener('mouseleave', onMouseLeave);
+  }
+  
+  tooltips.forEach((item) => {
+    item.addEventListener('mouseover', onMouseOver);
+  })
+  
+  
 }
 
