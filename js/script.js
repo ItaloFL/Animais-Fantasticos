@@ -3,6 +3,7 @@ import Accordion from './modules/accordion.js';
 import TabMenu from "./modules/tabnav.js";
 import Modal from "./modules/initModal.js";
 import Tolltip from './modules/tooltip.js'
+import initAnimaNumeros from "./modules/anima-numeros.js";
 
 import initAnimacaoScroll from "./modules/scroll.js";
 import initDropDownMenu from './modules/dropDownMenu.js'
@@ -11,7 +12,6 @@ import initMenuMobile from './modules/menu-mobile.js';
 import initFuncionamento from "./modules/funcionamento.js";
 import fetchAnimais from "./modules/fetchAnimais.js"; 
 import fetchBtc from "./modules/fetchBtc.js"; 
-import initAnimaNumeros from "./modules/anima-numeros.js";
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
