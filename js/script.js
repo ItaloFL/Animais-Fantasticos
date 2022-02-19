@@ -4,8 +4,9 @@ import TabMenu from "./modules/tabnav.js";
 import Modal from "./modules/initModal.js";
 import Tolltip from './modules/tooltip.js'
 import initAnimaNumeros from "./modules/anima-numeros.js";
+import AnimacaoScroll from "./modules/scroll.js";
 
-import initAnimacaoScroll from "./modules/scroll.js";
+
 import initDropDownMenu from './modules/dropDownMenu.js'
 import outsideClick from "./modules/outsideClick.js";
 import initMenuMobile from './modules/menu-mobile.js';
@@ -29,8 +30,10 @@ modal.init();
 const tolltip = new Tolltip('[data-tooltip]');
 tolltip.init();
 
+const animaScroll = new AnimacaoScroll('[data-anime="scroll"]');
+animaScroll.init()
 
-initAnimacaoScroll();
+
 initDropDownMenu();
 initMenuMobile();
 outsideClick();
