@@ -2,9 +2,9 @@ import ScrollSuave from "./modules/scroll-suave.js";
 import Accordion from './modules/accordion.js';
 import TabMenu from "./modules/tabnav.js";
 import Modal from "./modules/initModal.js";
+import Tolltip from './modules/tooltip.js'
 
 import initAnimacaoScroll from "./modules/scroll.js";
-import initTooltip from "./modules/tooltip.js";
 import initDropDownMenu from './modules/dropDownMenu.js'
 import outsideClick from "./modules/outsideClick.js";
 import initMenuMobile from './modules/menu-mobile.js';
@@ -26,9 +26,11 @@ tabNav.init();
 const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]')
 modal.init();
 
+const tolltip = new Tolltip('[data-tooltip]');
+tolltip.init();
+
 
 initAnimacaoScroll();
-initTooltip();
 initDropDownMenu();
 initMenuMobile();
 outsideClick();
