@@ -7,8 +7,9 @@ export default class Modal {
     this.eventToggleModal = this.eventToggleModal.bind(this)
     this.clickForaModal = this.clickForaModal.bind(this)
   }
-  
+
   toggleModal(){
+    console.log(this)
     this.modal.classList.toggle('ativo');
   }
 
