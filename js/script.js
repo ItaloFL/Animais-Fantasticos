@@ -7,14 +7,15 @@ import initAnimaNumeros from "./modules/anima-numeros.js";
 import AnimacaoScroll from "./modules/scroll.js";
 import DropDownMenu from "./modules/dropDownMenu.js";
 import MenuMobile from "./modules/menu-mobile.js";
+import fetchAnimais from "./modules/fetchAnimais.js";
+import fetchBtc from "./modules/fetchBtc.js"; 
 
 
 
 import outsideClick from "./modules/outsideClick.js";
 import initFuncionamento from "./modules/funcionamento.js";
 
-import fetchBtc from "./modules/fetchBtc.js"; 
-import fetchAnimais from "./modules/fetchAnimais.js";
+
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
@@ -41,12 +42,13 @@ dropMenu.init();
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
-fetchAnimais();
+fetchAnimais('../../animaisapi.json', '.numeros-grid');
+fetchBtc('https://blockchain.info/ticker', '.btc-preco');
+
 
 
 outsideClick();
 initFuncionamento();
-fetchBtc();
 initAnimaNumeros();
 
 
