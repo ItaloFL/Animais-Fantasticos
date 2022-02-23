@@ -9,7 +9,6 @@ export default class Modal {
   }
 
   toggleModal(){
-    console.log(this)
     this.modal.classList.toggle('ativo');
   }
 
