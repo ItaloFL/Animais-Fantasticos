@@ -3,7 +3,6 @@ import Accordion from './modules/accordion.js';
 import TabMenu from "./modules/tabnav.js";
 import Modal from "./modules/initModal.js";
 import Tolltip from './modules/tooltip.js'
-import initAnimaNumeros from "./modules/anima-numeros.js";
 import AnimacaoScroll from "./modules/scroll.js";
 import DropDownMenu from "./modules/dropDownMenu.js";
 import MenuMobile from "./modules/menu-mobile.js";
@@ -22,7 +21,6 @@ scrollSuave.init();
 
 const accordion = new Accordion('[data-anime="accordion"] dt');
 accordion.init();
-
 
 const tabNav = new TabMenu('[data-tab="menu"] li', '[data-tab="content"] section');
 tabNav.init();
@@ -49,7 +47,7 @@ fetchBtc('https://blockchain.info/ticker', '.btc-preco');
 
 outsideClick();
 initFuncionamento();
-initAnimaNumeros();
+
 
 
 
