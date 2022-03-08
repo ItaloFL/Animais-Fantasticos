@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, .5);
-  z-index: 2;
+  z-index: 600;
   display: none;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,8 @@
 
 
 .modal {
-  min-width: 300px;
+  width: 80vw;
+  max-width: 600px;
   background-color: white;
   padding: 40px;
   border: 10px solid #FB5;
@@ -48,11 +49,8 @@
   height: 50px;
   border: 4px solid white;
   border-radius: 50%;
-  background-color: #e54;
+  background: #e54 url(../img/fechar.svg) no-repeat center center;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
-  font-size: 1.2rem;
-  color: white;
-  font-family: 'IBM Plex Mono', monospace;
   cursor: pointer;
 }
 
@@ -66,6 +64,8 @@
 .modal input {
   width: 100%;
   padding: .7rem .5rem;
+  border: 2px solid #222;
+  border-radius: 0px;
 }
 
 
